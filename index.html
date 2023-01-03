@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My CSS Table and Form</title>
+    <style>
+      caption {
+        font-size: 1.3rem;
+      }
+      table {
+        border: 2px solid black;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 2px solid black;
+        padding: 5px;
+        text-align: center;
+      }
+      th {
+        background-color: rgb(9, 36, 25);
+        color: white;
+        height: 30px;
+      }
+      tr:nth-child(even) {
+        background-color: rgb(128, 194, 238);
+        color: black;
+      }
+      tr:nth-child(odd) {
+        background-color: rgb(3, 14, 37);
+        color: white;
+      }
+      th:hover {
+        background-color: rgb(74, 236, 236);
+        color: rgb(3, 14, 37);
+      }
+      tr:hover {
+        background-color: rgb(191, 243, 107);
+        color: black;
+      }
+      
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        margin: 10px 0;
+
+        box-sizing: border-box;
+        
+        border: 2px solid saddlebrown;
+       
+      }
+      #search {
+        background-image: url(images/search.png);
+        background-repeat: no-repeat;
+        background-position: 6px 5px;
+        padding: 15px 55px;
+        font-size:1.1rem;
+        width: 170px;
+
+        transition: width .5s ease-in-out;
+
+
+      }
+      #search:focus  {
+        background-color: rgb(171, 238, 109);
+        width: 100%;
+        border-radius: 5px;
+        
+        
+      }
+      textarea {
+        resize: none;
+        width:50%;
+        padding: 20px;
+        border: 2px solid black;
+        border-radius: 5px;
+      }
+      input[type="button"] {
+        border: none;
+        width: 100px;
+        background-color: bisque;
+        padding: 20px;
+        font-size:1rem;
+        border-radius: 5px;
+      }
+      select {
+        width: 50%;
+        border: none;
+        padding: 20px;
+        background-color: royalblue;
+        color: white;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        Student Data
+      </caption>
+      <tr>
+        <th>Student ID</th>
+        <th>Student Name</th>
+        <th>Student Email</th>
+        <th>GPA</th>
+        <th>Passing Year</th>
+      </tr>
+      <tr>
+        <td>120</td>
+        <td>Axar Patel</td>
+        <td>fhggh@gamil.xyz</td>
+        <td>5.00</td>
+        <td>2015</td>
+      </tr>
+      <tr>
+        <td>121</td>
+        <td>Fatima Patel</td>
+        <td>fhggh@gamil.xyz</td>
+        <td>5.00</td>
+        <td>2014</td>
+      </tr>
+      <tr>
+        <td>122</td>
+        <td>Jamal Khan</td>
+        <td>fhggh@gamil.xyz</td>
+        <td>5.00</td>
+        <td>2015</td>
+      </tr>
+      <tr>
+        <td>123</td>
+        <td>Sayed Akmal</td>
+        <td>fhggh@gamil.xyz</td>
+        <td>5.00</td>
+        <td>2015</td>
+      </tr>
+    </table>
+    <div></div> <p></p>
+    <form action="">
+      <input type="text" name="search" placeholder="search" id="search">
+      <p></p>
+      <label for="fname">First Name</label>
+      <input type="text" name="fname" id="fname">
+
+      <label for="lname">Last Name</label>
+      <input type="text" name="lname" id="lname">
+    </form>
+    <form action="#">
+      <select name="subject" id="subject">
+        <option value="C Programming">C Programming</option>
+        <option value="Web Development">Web Development </option>
+      </select>
+      <p></p>
+      <textarea name="" rows="10" cols="30">Write your comment here</textarea>
+      <p></p>
+      <input type="button" name="submit" id="submit" value="submit" />
+    </form>
+  </body>
+</html>
